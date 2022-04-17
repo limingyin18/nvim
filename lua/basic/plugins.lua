@@ -39,9 +39,10 @@ packer.startup(
             }
 
             -- 状态栏
-            use {
-                "feline-nvim/feline.nvim",
-                require("feline").setup()
+            use {"feline-nvim/feline.nvim",
+            config = function()
+                require("conf.feline")
+            end
             }
 
             -- 支持 LSP 状态的 buffer 栏
